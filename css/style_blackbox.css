@@ -16,10 +16,12 @@ body {
 	font-family: sans-serif;
 	background-color: #f5f5f5;
 	line-height: 3em;
+  justify-content: center;
 }
 
 .middle {
   margin: auto;
+  justify-content: center;
   max-width: 700px;
 }
 
@@ -32,7 +34,7 @@ body {
 .highlight2 {
 	background-color: black;
 	color: #f5f5f5;
-	size: 1.3em;
+	size: 2.5em;
 }
 
 .img-container-center {
@@ -51,6 +53,13 @@ p3 {
 	padding: 10px;
 }
 
+p2{
+  font-size: 2em;
+}
+
+p1{
+  font-size: 2.5em;
+}
 ul2 {
 	list-style: georgian;
 }

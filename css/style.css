@@ -11,40 +11,66 @@ body {
     font: helvetica;
     font-family: 'Signika', sans-serif;
     margin: 0;
+    border: 0;
+    padding: 0;
     font-size: 1.5em;
 
 }
 
 /* A link that has not been visited */
 a:link {
-    color: black;
+    color: inherit;
     text-decoration: none;
 }
 /* A link that has been visited */
 a:visited {
-    color: black;
-}
-/* A link that is hovered on */
-a:hover {
-  color: white;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-/* A link that is selected */
-a:active {
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: inherit;
 }
 
+/* A link that is hovered on */
+a:hover {
+  background-color: #C4C4C4;
+}
+
+/* A link that is selected */
+a:active {
+    color: grey;
+}
+
+a {
+    cursor: url("cursor.cur"),  default;
+}
+a>div { display: none; }
+a:hover>div { display: block; }
 
 #right-text-head {
   color: #f5f5f5;
   position: fixed;
-right: 0;
-top: 0;
+right: 10px;
+top: 20px;
 font-size: 1.5em;
 margin: 0;
-padding: 20px;
+padding: 0px;
 }
+
+
+.hiddenimg {
+  background-color: white;
+  display: none;
+  position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    border: 2px solid;
+    border-color: 50% black 50% white;
+}
+
+.hiddentxt:hover ~ .hiddenimg {
+  display: block;
+}
+
+
 
 h1 {
   size: 1em;
@@ -72,20 +98,24 @@ p1 {
   font-style: italic;
   font-weight: lighter;
 }
+
 #asterisk {
   position: fixed;
-  bottom:-210px;
-  left: 10px;
-  font-size: 3em;
+  bottom:-70px;
+  left: 0px;
+  font-size: 5em;
   padding: 0;
+  margin:0;
 }
 
 #contact {
   color: #f5f5f5;
   position: fixed;
-  bottom: -80px;
+  bottom: 0px;
   right: 5;
-  font-size: 1em;
+  font-size: 1.75em;
+  margin: 0;
+  padding: 0;
 }
 
 #info {
@@ -94,5 +124,30 @@ p1 {
   bottom: 100px;
   right: -10;
   transform: rotate(-90deg);
-  font-size: 1em;
+  font-size: 1.75em;
+
   }
+
+#info :hover {
+  text-decoration: underline;
+  background-color: inherit;
+}
+
+  #info :active {
+      color: grey;
+    }
+
+    #contact :hover {
+      text-decoration: underline;
+      background-color: inherit;
+    }
+
+      #contact :active {
+          color: grey;
+        }
+
+      #blackbox {
+        position: absolute;
+        margin: 0 auto;
+        align-items: center;
+      }

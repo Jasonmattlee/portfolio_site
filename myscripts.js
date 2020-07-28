@@ -39,7 +39,7 @@ function clearCanvas(whenPressKey) {
 	}
 }
 
-drawing_line("#FF6347", x, y, x, y, paper);
+drawing_line("#FF6347", x-1, y, x, y, paper);
 
 function drawing_line(color, x_start, y_start, x_end, y_end, board){
 	board.beginPath();

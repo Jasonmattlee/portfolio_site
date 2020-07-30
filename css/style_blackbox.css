@@ -57,3 +57,7 @@ p1 {
 ul2 {
 	list-style: georgian;
 }
+
+strong {
+	font-size: 1.5em;
+}

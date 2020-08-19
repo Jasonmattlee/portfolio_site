@@ -1,0 +1,216 @@
+.container{
+     margin: 0;
+     border: 0;
+     padding: 0;
+}
+ body,html {
+     background-color:black;
+     background-size:cover;
+     background-repeat:no-repeat;
+     font:helvetica;
+     font-family:'Signika',sans-serif;
+     margin:0;
+     border:0;
+     padding:0;
+     font-size:1em;
+     color:white;
+}
+
+/* A link that has not been visited */
+ a:link {
+     color: inherit;
+     text-decoration: underline;
+}
+/* A link that has been visited */
+ a:visited {
+     color: inherit;
+}
+/* A link that is hovered on */
+ a:hover {
+     background-color: #5484FF;
+     color: black;
+}
+/* A link that is selected */
+ a:active {
+     color: grey;
+}
+/*main text*/
+
+ p {
+   left:50%;
+     padding-left: 20px;
+     padding-right: 20px;
+     max-width: 70%;
+     font-size: 4em;
+     margin-left: 10%;
+}
+/* close box */
+ #right-text-head {
+     color:#black;
+     position:fixed;
+     right:10px;
+     top:50px;
+     font-size:1.5em;
+     margin:0;
+     padding:20px;
+}
+/* scrolling */
+ .scroll-left {
+     height:50px;
+     overflow:hidden;
+     position:relative;
+     background-color:white;
+     color: black;
+}
+ .scroll-left p {
+     position:absolute;
+     width:100%;
+     height:100%;
+     margin:0;
+     line-height:50px;
+     text-align:center;
+    /* Starting position */
+     -moz-transform:translateX(100%);
+     -webkit-transform:translateX(100%);
+     transform:translateX(100%);
+    /* Apply animation to this element */
+     -moz-animation:scroll-left 10s linear infinite;
+     -webkit-animation:scroll-left 10s linear infinite;
+     animation:scroll-left 20s linear infinite;
+}
+/* Move it (define the animation) */
+ @-moz-keyframes scroll-left {
+     0% {
+         -moz-transform:translateX(100%);
+    }
+     100% {
+         -moz-transform:translateX(-100%);
+    }
+}
+ @-webkit-keyframes scroll-left {
+     0% {
+         -webkit-transform:translateX(100%);
+    }
+     100% {
+         -webkit-transform: translateX(-100%);
+    }
+}
+ @keyframes scroll-left {
+     0% {
+         -moz-transform:translateX(100%);
+        /* Browser bug fix */
+         -webkit-transform:translateX(100%);
+        /* Browser bug fix */
+         transform:translateX(100%);
+    }
+     100% {
+         -moz-transform:translateX(-100%);
+        /* Browser bug fix */
+         -webkit-transform:translateX(-100%);
+        /* Browser bug fix */
+         transform:translateX(-100%);
+    }
+}
+/*Style for the first level menu bar*/
+ul#menu{
+  right: 20px;
+ position: fixed;
+ top: 0px;
+ z-index: 1000;
+ width: 100px;
+ padding-inline-start: 0;
+ margin:0;
+/*   padding:0 10px; */
+  background:black;
+  color:white;
+  box-shadow:0 -1px rgba(0,0,0,.5) inset;
+  font-size: 1em;
+}
+
+ul#menu > li{
+  float:auto;
+  list-style-type:none;
+  position:relative;
+}
+
+label{
+  position:relative;
+  display:block;
+  padding:0 18px 0 18px;
+  line-height:3em;
+  transition:background 0.3s;
+  cursor:pointer;
+}
+
+label:after{
+  content:"";
+  position:absolute;
+  display:block;
+  top:50%;
+  right:5px;
+  width:0;
+  height:0;
+  border-top: 4px solid rgba(255,255,255,.5);
+  border-bottom: 0 solid rgba(255,255,255,.5);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  transition: border-bottom .1s, border-top .1s .1s;
+  }
+
+label:hover,
+input:checked ~ label{text-decoration: underline;}
+
+input:checked ~ label:after{
+  border-top:0 solid rgba(255,255,255,.5);
+  border-bottom:4px solid rgba(255,255,255,.5);
+  transition:border-top .1s, border-bottom .1s .1s;
+}
+
+/*hide the inputs*/
+input{display:none}
+
+/*show the second levele menu of the selected voice*/
+input:checked ~ ul.submenu{
+  max-height:300px;
+  transition:max-height 0.5s ease-in;
+  z-index:1100;
+}
+
+/*style for the second level menu*/
+ul.submenu{
+  max-height:0;
+  padding:0;
+  overflow:hidden;
+  list-style-type:none;
+  background: white;
+  box-shadow:0 0 1px rgba(0,0,0,.3);
+  transition:max-height 0.5s ease-out;
+  position:absolute;
+  min-width:100%;
+  z-index: 1000;
+}
+
+ul.submenu li a{
+  display:block;
+  padding:12px;
+  color: black;
+  text-decoration:none;
+  transition:background .3s;
+  white-space:nowrap;
+}
+
+ul.submenu li a:hover{
+  background: #c4c4c4;
+}
+
+mark {
+  background-color: yellow;
+  color: black;
+}
+img {
+  position: fixed;
+  bottom: 40%;
+  right: 20px;
+  width:150px;
+
+}

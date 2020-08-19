@@ -9,7 +9,6 @@
 }
  body {
      display:block;
-     background-color:#f5f5f5;
      background-repeat:no-repeat;
      font:helvetica;
      font-family:sans-serif;
@@ -79,9 +78,8 @@ ul#menu{
  padding-inline-start: 0;
  margin:0;
 /*   padding:0 10px; */
-  background:black;
-  color:white;
-  box-shadow:0 -1px rgba(0,0,0,.5) inset;
+  background:#f5f5f5;
+  color:black;
   font-size: 1.8em;
   line-height: 1.15em;
 }
@@ -109,8 +107,8 @@ label:after{
   right:-10px;
   width:0px;
   height:0;
-  border-top: 5px solid rgba(255,255,255,.5);
-  border-bottom: 0 solid rgba(255,255,255,.5);
+  border-top: 5px solid black;
+  border-bottom: 0 solid black;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   transition: border-bottom .1s, border-top .1s .1s;
@@ -120,8 +118,8 @@ label:hover,
 input:checked ~ label{text-decoration: underline;}
 
 input:checked ~ label:after{
-  border-top:0 solid rgba(255,255,255,.5);
-  border-bottom:4px solid rgba(255,255,255,.5);
+  border-top:0 solid black;
+  border-bottom:4px solid black;
   transition:border-top .1s, border-bottom .1s .1s;
 }
 

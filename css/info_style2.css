@@ -113,7 +113,7 @@
 }
 /*Style for the first level menu bar*/
 ul#menu{
-  right: 20px;
+  right: 35px;
  position: fixed;
  top: 0px;
  z-index: 1000;
@@ -124,7 +124,7 @@ ul#menu{
   background:black;
   color:white;
   box-shadow:0 -1px rgba(0,0,0,.5) inset;
-  font-size: 1em;
+  font-size: 1.8em;
 }
 
 ul#menu > li{
@@ -147,13 +147,13 @@ label:after{
   position:absolute;
   display:block;
   top:50%;
-  right:5px;
+  right:-10px;
   width:0;
   height:0;
-  border-top: 4px solid rgba(255,255,255,.5);
+  border-top: 5px solid rgba(255,255,255,.5);
   border-bottom: 0 solid rgba(255,255,255,.5);
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
   transition: border-bottom .1s, border-top .1s .1s;
   }
 

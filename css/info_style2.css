@@ -7,8 +7,7 @@
      background-color:black;
      background-size:cover;
      background-repeat:no-repeat;
-     font:helvetica;
-     font-family:'Signika',sans-serif;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
      margin:0;
      border:0;
      padding:0;
@@ -27,7 +26,7 @@
 }
 /* A link that is hovered on */
  a:hover {
-     background-color: #5484FF;
+     background-color: #8FD7FF;
      color: black;
 }
 /* A link that is selected */
@@ -46,7 +45,7 @@
 }
 /* close box */
  #right-text-head {
-     color:#black;
+     color:black;
      position:fixed;
      right:10px;
      top:50px;
@@ -207,10 +206,39 @@ mark {
   background-color: yellow;
   color: black;
 }
-img {
+figure {
   position: fixed;
   bottom: 40%;
-  right: 20px;
+  right: -30px;
   width:150px;
-
+  bottom: -10px;
+  caption-side: top;
 }
+
+img {
+  width: 150px;
+}
+
+u {
+text-decoration: line-through;
+}
+
+figcaption {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1.5em;
+  right: 0px;
+  caption-side: top;
+  }
+
+/* Custom highlight */
+  ::-moz-selection { /* Code for Firefox */
+    color: #8EFFD0;
+    background: #E7A4FF;
+  }
+
+  ::selection {
+    color: #8EFFD0;
+    background: #E7A4FF;
+  }

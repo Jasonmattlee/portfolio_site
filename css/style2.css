@@ -7,16 +7,16 @@
      padding: 0;
 }
  body {
-     background-image: linear-gradient(to right, #f5f5f5, #f5f5f5 50%, black 50%, black);
+     background-image: linear-gradient(to right, white, white 50%, black 50%, black);
      background-size: cover;
      background-repeat: no-repeat;
-     font: helvetica;
-     font-family: 'Signika', sans-serif;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
      margin: 0;
      border: 0;
      padding: 0;
      font-size: 1.5em;
      position: fixed;
+     cursor: url('cursor.ico'), default;
      -webkit-touch-callout: none;
     /* iOS Safari */
      -webkit-user-select: none;
@@ -37,7 +37,7 @@
 }
 /* A link that is hovered on */
  a:hover {
-     background-color: #5484FF;
+     background-color: #8FD7FF;
      color: black;
 }
 
@@ -81,30 +81,32 @@
     z-index: 0;
     max-width: 50%;
     text-align: left;
-    background-color: #f5f5f5;
+    background-color: white;
     color: black;
     margin-bottom: 300px;
     }
 /* hover image */
  .hiddenimg {
-     background-color: white;
+     background-color: red;
      display: none;
      position: fixed;
+     height: 75%;
      top: 50%;
-     left: 50%;
+     left:50%;
      transform: translate(-50%, -50%);
-     padding: 10px;
-     border: 2px solid;
-     border-color: 50% black 50% white;
-     z-index: 10000;
-}
+    padding-left: 12px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+
+  }
 
  .hiddentxt:hover~.hiddenimg {
      display: block;
+     visibility: visible;
      z-index: 10000;
 }
+
  h1 {
-     size: 1em;
      position: relative;
      font-weight: lighter;
      padding-left: 20px;
@@ -122,7 +124,6 @@
  .highlight {
      background-color: black;
      color: #f5f5f5;
-     size: 1.3em;
      z-index: -2;
 }
 /*italic */
@@ -144,7 +145,7 @@
      color: #f5f5f5;
      position: fixed;
      bottom: 0px;
-     right: 5;
+     right: 5px;
      font-size: 1.75em;
      margin: 0;
      padding: 0;
@@ -153,7 +154,7 @@
      color: #f5f5f5;
      position: fixed;
      bottom: 100px;
-     right: -10;
+     right: -10px;
      transform: rotate(-90deg);
      font-size: 1.75em;
 }
@@ -184,11 +185,13 @@
 }
 /* drawing */
  canvas {
-     width: 100%;
-     height: 100%;
+     width: 50%;
+     height: 50%;
      margin: 0;
-     z-index:-1;
-     position: fixed;
+     z-index:100;
+     bottom: 0px;
+     left: 0px;
+    position: fixed;
 }
 
 /*Style for the first level menu bar*/
@@ -283,6 +286,8 @@ ul.submenu li a:hover{
   background: #c4c4c4;
 }
 
+
+
 .ascii-art {
     font-family: monospace;
     white-space: pre;
@@ -298,4 +303,8 @@ strong{
 border-width: thin;
 border-style: dashed;
 
+}
+
+u {
+text-decoration: line-through;
 }
